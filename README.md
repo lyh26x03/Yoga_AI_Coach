@@ -81,16 +81,3 @@ python training/train_transformer.py
 ```bash
 python training/evaluate_model.py
 ```
-
-## UI 部分
-目前 `ui/` 內的程式未整理，若不需要可刪除 `run_ui.py`。
-
-## 注意事項
-- `data/processed/` 內的數據總大小約 72.5MB，可直接上傳 GitHub。
-- `requirements.txt` 尚未整理，如有需要可使用 `pip freeze > requirements.txt` 生成。
-
----
-
-這樣的 README 結構清晰，包含 **專案架構、功能、安裝步驟、運行方式**，讓使用者能快速上手。
-
-# Yoga_AI_Coach
