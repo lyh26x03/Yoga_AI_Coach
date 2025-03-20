@@ -16,7 +16,7 @@ Yoga_AI_Coach/
 │   ├── evaluate_model.py             # 評估模型表現
 │   ├── transformer_model.py          # Transformer 模型結構
 │   └── train_transformer.py          # 訓練 Transformer 模型
-├── ui/    # UI 介面相關（目前未使用）
+├── ui/    # UI 介面
 │   ├── function_forGUIdesign.py
 │   ├── function_forMySQL.py
 │   ├── function_forposture_add_angle_mp3.py
