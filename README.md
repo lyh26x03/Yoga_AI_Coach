@@ -10,7 +10,7 @@ Yoga_AI_Coach/
 │   ├── calculate_features.py        # 計算長度和角度特徵
 │   └── normalize_data.py            # 標準化特徵數據
 ├── training/    # 訓練與評估模型
-│   ├── preprocess.py                 # 訓練前的數據預處理
+│   ├── data_loader.py                 # 訓練前的數據預處理
 │   ├── lstm+attention_model.py       # LSTM + Attention 模型結構
 │   ├── train_lstm+attention.py       # 訓練 LSTM + Attention 模型
 │   ├── evaluate_model.py             # 評估模型表現
