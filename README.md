@@ -30,7 +30,7 @@ Yoga_AI_Coach/
 │   ├── function_forMySQL.py
 │   ├── function_forposture_add_angle_mp3.py
 │   ├── function_forpred.py
-│   ├── Gradio_web_7_diff_UI_design_button_title_ta...
+│   ├── Gradio_web_7_diff_UI_design_button_title_table.py
 │   └── Image/
 ├── data/                    # 資料存放
 │   ├── dataset.zip                 # 壓縮後的數據集
@@ -97,7 +97,7 @@ Yoga_AI_Coach/
 | 模型                  | 特徵組合    | 測試準確率     | 參數設計與說明                           |
 | ------------------- | ------- | --------- | --------------------------------- |
 | LSTM + Attention    | 長度+角度混合 | 95.7%     | 3層 Dense, Dropout 0.5, 800 epochs |
-| Transformer Encoder | 長度+角度混合 | 93.8%（舉例） | Encoder 3層、Head=6、CosineDecay     |
+| Transformer Encoder | 長度+角度混合 | 94.3%     | Encoder 3層、Head=6、CosineDecay     |
 
 ### 3. **使用者介面模組 `ui/`**
 
