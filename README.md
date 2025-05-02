@@ -38,8 +38,7 @@ Yoga_AI_Coach/
 │   │   ├── landmarks_results.zip         # extract_landmarks.py 產出 (關鍵點數據)
 │   │   ├── yoga_pose_features/           # calculate_features.py 產出 (姿勢特徵數據)
 │   │   └── yoga_features_norm/           # normalize_data.py 產出 (標準化特徵數據，供模型訓練)
-├── README.md                 # 本說明文件
-└── requirements.txt          # 依賴環境（尚未整理）
+└── README.md                 # 本說明文件
 ```
 
 ---
