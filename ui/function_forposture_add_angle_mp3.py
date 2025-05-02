@@ -51,7 +51,7 @@ class DashedLineDrawer:
         self.mp_pose = mp.solutions.pose
         
         pygame.mixer.init()
-        self.success_sound = pygame.mixer.Sound(r"C:\Users\User\Desktop\UI_recognition\Image\Correct.wav") 
+        self.success_sound = pygame.mixer.Sound(r"C:\Yoga_AI_Coach\ui\Image\Correct.wav")
         self.green_start_time = None  # 記錄綠色開始的時間
     
     def play_sound(self):

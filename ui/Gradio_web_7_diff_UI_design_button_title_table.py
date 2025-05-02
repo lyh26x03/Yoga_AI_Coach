@@ -16,7 +16,7 @@ from function_forMySQL import YogaApp
 
 
 #讀取檔案
-model = tf.keras.models.load_model(r'C:\Users\User\Desktop\UI_recognition\LSTM+attention_All_2_lin_30_frame_split_second.h5')
+model = tf.keras.models.load_model(r'C:\Yoga_AI_Coach\ui\LSTM+attention_All_2_lin_30_frame_split_second.h5')
 # 瑜珈動作類別名稱
 POSE_CLASSES = ["Boat", "DownwardDog", "Plank", "Triangle", "Warriorthree", "Warriortwo"]
 
@@ -141,7 +141,7 @@ class Recognition(tk.Frame):
         self.ui_display.place(relx=0.4, rely=0.5, anchor='center')   
         
         # 加載圖片
-        image_path = r"C:\Users\User\Desktop\UI_recognition\Image\Yoga.jpg"  # 替換成你的圖片路徑
+        image_path = r"C:\Yoga_AI_Coach\ui\Image\Yoga.jpg"  # 替換成你的圖片路徑
         image = Image.open(image_path)
         image = image.resize((370, 370))  # 調整圖片大小
         photo = ImageTk.PhotoImage(image)
@@ -174,7 +174,7 @@ class Recognition(tk.Frame):
         
     
     def update_pose_image(self, pose_name):
-        new_image_path = fr"C:\Users\User\Desktop\UI_recognition\Image\{pose_name}.jpg"
+        new_image_path = fr"C:\Yoga_AI_Coach\ui\Image\{pose_name}.jpg"
         image = Image.open(new_image_path)
         image = image.resize((370, 370))  # 調整大小
         photo = ImageTk.PhotoImage(image)
@@ -234,8 +234,8 @@ class Recognition(tk.Frame):
         angles = AngleFormodel.calculate_pose_angles(keypoints_sequence)  # 計算角度 (30, 6)
         
         features = np.concatenate([distances, angles], axis=1)  # 合併距離與角度 (30, 28)
-        max_Path = r'C:\Users\User\Desktop\UI_recognition\max_value_first_30_split_second_normalize.npy'
-        min_Path = r'C:\Users\User\Desktop\UI_recognition\min_value_first_30_split_second_normalize.npy'
+        max_Path = r'C:\Yoga_AI_Coach\data\processed\yoga_features_norm\max_value.npy'
+        min_Path = r'C:\Yoga_AI_Coach\data\processed\yoga_features_norm\min_value.npy'
         features_nm, _, _ = min_max_normalize(features,max_Path,min_Path)  # Min-Max 標準化
         features_nm = np.delete(features_nm,12, axis = 1)
         prediction = model.predict(features_nm[np.newaxis, :, :])  # 需要額外 batch 維度 (1, 30, 28)
