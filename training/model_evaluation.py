@@ -8,11 +8,11 @@ from tensorflow.keras.models import load_model
 from sklearn.metrics import f1_score, cohen_kappa_score
 
 # = = = 加載最佳模型 = = = #
-model = load_model('C:/Users/USER/Desktop/Model_results/best_model.h5')
+model = load_model('C:/Yoga_AI_Coach/Model_results/best_model.h5')
 
 # = = = 讀取測試資料 = = = #
-X_test = np.load('C:/Users/USER/Desktop/Data.zip/Data/All_yoga_pose_28features_max_min/X_first_30_split_second_normalize_3.npy')
-y_test = np.load('C:/Users/USER/Desktop/Data.zip/Data/All_yoga_pose_28features_max_min/y_first_30_split_second_normalize_3.npy')
+X_test = np.load('C:/Yoga_AI_Coach/data/processed/yoga_features_norm/X_test.npy')
+y_test = np.load('C:/Yoga_AI_Coach/data/processed/yoga_features_norm/y_test.npy')
 
 # 分開長度與角度特徵
 X_test_length = X_test[:, :, :21]  # 長度
@@ -20,8 +20,8 @@ X_test_angles = X_test[:, :, 21:]  # 角度
 
 # 選擇模型
 Model_name = "LSTM_length_9_lin"  # 或 "LSTM_Angle_9_lin"
-checkpoint_filepath = f'C:/Users/USER/Desktop/Model_results/{Model_name}.h5'
-Figure_filepath = "C:/Users/USER/Desktop/Model_results/Figures/"
+checkpoint_filepath = f'C:/Yoga_AI_Coach/Model_results/{Model_name}.h5'
+Figure_filepath = "C:/Yoga_AI_Coach/Model_results/Figures/"
 
 # 依據模型類型載入對應的 X_test
 if "Angle" in Model_name:

@@ -16,7 +16,7 @@ from function_forMySQL import YogaApp
 
 
 #讀取檔案
-model = tf.keras.models.load_model(r'C:\Users\User\Desktop\UI_recognition\Transformer_All_6_Eva_30_frame_split_first_feature_27.h5')
+model = tf.keras.models.load_model(r'C:\Users\User\Desktop\UI_recognition\LSTM+attention_All_2_lin_30_frame_split_second.h5')
 # 瑜珈動作類別名稱
 POSE_CLASSES = ["Boat", "DownwardDog", "Plank", "Triangle", "Warriorthree", "Warriortwo"]
 

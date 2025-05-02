@@ -48,6 +48,6 @@ history = model.fit(
 
 # 訓練完後，儲存整個模型
 model_name = 'Transformer_All_1_Eva_30_frame_split_first'
-save_model_filepath = f'C:/Users/USER/Desktop/Model_results/{model_name}.h5'
+save_model_filepath = f'C:/Yoga_AI_Coach/Model_results/{model_name}.h5'
 model.save(save_model_filepath)  # 儲存整個模型
 print(f"模型已儲存至：{save_model_filepath}")

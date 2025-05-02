@@ -60,6 +60,6 @@ history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, vali
 
 # 儲存整個模型
 model_name = 'LSTM_All_model_test2_7_lin_30_frame_split_second'
-save_model_filepath = f'C:/Users/USER/Desktop/Model_results/{model_name}.h5'
+save_model_filepath = f'C:/Yoga_AI_Coach/Model_results/{model_name}.h5'
 model.save(save_model_filepath)  # 儲存整個模型
 print(f"模型已儲存至：{save_model_filepath}")
