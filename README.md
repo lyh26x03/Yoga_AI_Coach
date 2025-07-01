@@ -1,14 +1,11 @@
 # Yoga AI Coach
 
-Yoga AI Coach 是一個基於深度學習的瑜伽姿勢識別系統，使用 LSTM 和 Transformer 來分析影片中的瑜伽動作，並提供即時的 AI 指導。
+Yoga AI Coach 是一個基於深度學習的瑜伽姿勢識別系統，分別使用 LSTM 和 Transformer 來分析影片中的瑜伽動作，並提供即時的 AI 矯正指導！
 
-> *「技術不只是解法，也是一種凝視世界的方式。這個專案，是我第一次用深度學習去觀察『動作』——觀察人類如何在時序中表達身體、在空間裡書寫能量。」*
+> *「技術不只是解法，也是一種凝視世界的方式。在此專案，透過深度學習去觀察『動作』——觀察人類如何在時序中表達身體、在空間裡書寫能量。」*
 
-> **我們不只是訓練模型，更希望打造一個能即時互動、精確分類並回饋使用者的瑜珈動作辨識系統。**
+> **打造一個能即時指導互動、精確辨識分類並回饋使用者的瑜珈動作辨識系統，而且有效提升運動效果。**
 
-### 我的動機
-
-這個專案起初是由組員提出的構想，我因為對瑜珈、身體的語言以及其文化背景懷有興趣，因此選擇加入並共同實作。在參與過程中，我對 AI 模型的建構與驗證產生高度興趣，開始投入模型訓練流程的研究，並主導了 LSTM+Attention 與 Transformer 架構的設計與實驗。這次經驗讓我體會到資料處理與模型評估的深度，也讓我更確定自己未來想要成為能夠橋接「資料、模型與人」之間理解的人。
 
 ## 📂 目錄結構
 
@@ -71,7 +68,7 @@ Yoga_AI_Coach/
 
 ---
 
-### 🧠 模型設計思考：如何讓模型「看懂動作」？
+### 🧠 模型選擇與設計思考－－如何讓模型「看懂動作」？
 
 讓模型學會：**在時間中觀察動作，在空間中辨認姿態。**
 
@@ -85,13 +82,13 @@ Yoga_AI_Coach/
 | LSTM + Attention    | 序列較短、動作流暢   | 強調時間依賴與上下文連貫性；可聚焦關鍵幀位置 |
 | Transformer Encoder | 複雜動作、姿勢分化明顯 | 全序列並行建模、捕捉全身協調與長距離依賴關係 |
 
-> 依據不同特徵組合（骨架長度、動作角度、混合特徵）設計多組實驗，並透過 Dropout、L2 正則化、CosineDecay 等策略優化模型泛化能力。
+> 依據不同特徵組合（骨架長度、動作角度、混合特徵）設計多組實驗，並透過各種策略優化模型泛化能力。
 
 此外，考量實作效率與任務目標為「分類」而非「生成」，Transformer 架構僅保留 **Encoder**，省略 Decoder，避免不必要的參數冗餘與過擬合風險。
 
 ---
 
-### 📊 實驗結果摘要（LSTM + Attention vs Transformer）
+### 📊 實驗最佳結果摘要
 
 | 模型                  | 特徵組合    | 測試準確率     | 參數設計與說明                           |
 | ------------------- | ------- | --------- | --------------------------------- |
@@ -177,7 +174,6 @@ pip install tensorflow scikit-learn matplotlib
 python training/data_loader.py
 
 # 2. 建立模型結構 (LSTM or Transformer)
-# (此步驟通常由訓練腳本自動呼叫模型構築檔)
 training/lstm+attention_model.py       # LSTM + Attention 模型定義
 training/transformer_model.py          # Transformer 模型定義
 
@@ -223,7 +219,7 @@ pip install pygame opencv-python mediapipe mysql-connector-python
 | Gradio_web_7_diff_UI_design_button_title_table.py | ✅ 主程式，啟動 Gradio 介面與攝影機                          |
 | function_forposture_add_angle_mp3.py              | ✅ 根據模型預測姿勢判定角度標準，提供色彩標示與音效回饋（正確時播放 Correct.wav） |
 | function_forpred.py                               | ✅ 輔助姿勢角度計算、特徵提取與正規化處理                           |
-| function_forMySQL.py                              | ✅ 記錄練習姿勢與持續時間，並透過 GUI 將結果上傳至 MySQL 資料庫          |
+| function_forMySQL.py                              | ✅ 記錄練習姿勢與持續時間，透過 GUI 將結果上傳至 MySQL 資料庫          |
 | function_forGUIdesign.py                          | ✅ 自訂 tkinter 背景樣式與圓角按鈕設計                        |
 
 #### ▶ 啟動介面操作（主程式啟動）
