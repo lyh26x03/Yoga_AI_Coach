@@ -1,6 +1,6 @@
 # Yoga AI Coach
 
-Yoga AI Coach 是一個基於深度學習的瑜伽姿勢識別系統，分別使用 LSTM 和 Transformer 來分析影片中的瑜伽動作，並提供即時的 AI 矯正指導！
+Yoga AI Coach 是一個基於深度學習的瑜伽姿勢識別系統，分別使用 LSTM 和 Transformer，實現高達95.7%準確率的高效動作識別，並提供即時的 AI 矯正指導與訓練追蹤！
 
 > *「技術不只是解法，也是一種凝視世界的方式。在此專案，透過深度學習去觀察『動作』——觀察人類如何在時序中表達身體、在空間裡書寫能量。」*
 
@@ -37,13 +37,6 @@ Yoga_AI_Coach/
 │   │   └── yoga_features_norm/           # normalize_data.py 產出 (標準化特徵數據，供模型訓練)
 └── README.md                 # 本說明文件
 ```
-
----
-
-運用 MediaPipe 提取人體關鍵點，將動作轉換為幾何特徵後，使用 LSTM + Attention 和 Transformer 模型進行訓練與評估，實現達95.7%準確率的高效動作識別。
-
-再通過 Gradio 提供即時姿勢回饋，並將使用者練習結果儲存至 MySQL 資料庫，方便持續追蹤進度。
-
 ---
 ## 關鍵技術點
 1. 姿勢識別
