@@ -10,9 +10,9 @@
 
 * 3-stage ETL (Python) • Data Norm • 95.7 % 準確率  
 
-技術棧：Python 3.10 · TensorFlow · MySQL · Gradio  
+* 技術棧：Python 3.10 · TensorFlow · MySQL · Gradio  
 
-• MySQL 儲存訓練紀錄，可延伸使用者留存分析
+* MySQL 儲存訓練紀錄，可延伸使用者留存分析
 
 ### 🔄 ETL 流程
 <details>
