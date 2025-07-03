@@ -6,6 +6,20 @@
 
 > **打造能即時指導互動、精確辨識分類並回饋使用者的健康科技，有效輔助運動成果。**
 
+🧘‍♀️ Yoga AI Coach — 𝙑𝙞𝙙𝙚𝙤 → 𝙀𝙏𝙇 → LSTM + Attention → 即時矯正回饋  
+• 3-stage ETL (Python) • Data Norm • 95.7 % 準確率  
+技術棧：Python 3.10 · TensorFlow · MySQL · Gradio  
+• MySQL 儲存訓練紀錄，可延伸使用者留存分析
+
+### ETL 流程
+
+```mermaid
+graph LR
+    A[dataset.zip] --> B[feature_extraction/extract_landmarks.py]
+    B --> C[feature_extraction/calculate_features.py]
+    C --> D[feature_extraction/normalize_data.py]
+    D --> E[training/train_lstm+attention.py]
+
 
 ## 📂 目錄結構
 
