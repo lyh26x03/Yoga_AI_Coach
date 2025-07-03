@@ -8,7 +8,7 @@
 
 🧘‍♀️ Yoga AI Coach — 𝙑𝙞𝙙𝙚𝙤 → 𝙀𝙏𝙇 → LSTM + Attention → 即時矯正回饋  
 
-• 3-stage ETL (Python) • Data Norm • 95.7 % 準確率  
+* 3-stage ETL (Python) • Data Norm • 95.7 % 準確率  
 
 技術棧：Python 3.10 · TensorFlow · MySQL · Gradio  
 
