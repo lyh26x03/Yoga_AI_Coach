@@ -11,6 +11,19 @@
 技術棧：Python 3.10 · TensorFlow · MySQL · Gradio  
 • MySQL 儲存訓練紀錄，可延伸使用者留存分析
 
+### ETL 流程
+
+```other
+dataset.zip             # 原始特徵資料（.npy 格式）
+    ↓ extract_landmarks.py
+landmarks_results.zip   # MediaPipe 擷取關鍵點資料
+    ↓ calculate_features.py
+yoga_pose_features/     # 長度與角度特徵
+    ↓ normalize_data.py
+yoga_features_norm/     # 正規化後的模型輸入資料
+```
+
+
 ## 📂 目錄結構
 
 ```javascript
