@@ -28,6 +28,8 @@ flowchart TD
     D -->|train_lstm+attention.py<br>train_transformer.py| E[Saved Models]
 ```
 
+</details>
+
 
 
 ## 📂 目錄結構
