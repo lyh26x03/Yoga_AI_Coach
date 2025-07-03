@@ -17,6 +17,7 @@
 ### 🔄 ETL 流程
 <details>
 <summary>（點我展開流程圖）</summary>
+    
 ```mermaid
 flowchart TD
     subgraph Feature Extraction
@@ -26,6 +27,7 @@ flowchart TD
     end
     D -->|train_lstm+attention.py<br>train_transformer.py| E[Saved Models]
 ```
+
 
 
 ## 📂 目錄結構
