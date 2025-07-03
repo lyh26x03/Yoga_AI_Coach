@@ -6,7 +6,7 @@
 
 > **打造能即時指導互動、精確辨識分類並回饋使用者的健康科技，有效輔助運動成果。**
 
-🧘‍♀️ Yoga AI Coach — 𝙑𝙞𝙙𝙚𝙤 → 𝙀𝙏𝙇 → LSTM + Attention → 即時矯正回饋  
+🧘‍♀️ Yoga AI Coach — 𝙑𝙞𝙙𝙚𝙤 → 𝙀𝙏𝙇 → LSTM + Attention / Transformer Encoder → 即時矯正回饋  
 
 * 3-stage ETL (Python) • Data Norm • 95.7 % 準確率  
 
